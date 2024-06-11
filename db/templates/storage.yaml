@@ -16,7 +16,7 @@ metadata:
   name: {{ include "db.fullname" . }}
 spec:
   accessModes:
-    - ReadWriteOne
+    - ReadWriteOnce
   resources:
     requests:
       storage: {{ .Values.persistence.size }}
