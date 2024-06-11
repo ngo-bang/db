@@ -13,7 +13,7 @@ service:
 persistence:
   enabled: true
   accessModes:
-    - ReadWriteMany
-  size: 2Gi
+    - ReadWriteOne
+  size: 4Gi
   storageClass: ""
-
+  path: "/data"
