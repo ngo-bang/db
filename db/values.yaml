@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: ngocongbang/database
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "latest"
 
 service:
   port: 27017
