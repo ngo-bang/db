@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: ngocongbang/db
+  pullPolicy: IfNotPresent
+  tag: ""
+
+service:
+  port: 27017
+  targetPort: 27017
+  type: ClusterIP
+  
+persistence:
+  enabled: true
+  accessModes:
+    - ReadWriteMany
+  size: 2Gi
+  storageClass: ""
+

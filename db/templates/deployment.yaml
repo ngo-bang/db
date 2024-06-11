@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "db.fullname" . }}
+  labels:
+    app: {{ include "db.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "db.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "db.name" . }}
+    spec:
+      containers:
+        - name: {{ .db.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.port }}
