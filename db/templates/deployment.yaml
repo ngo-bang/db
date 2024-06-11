@@ -15,7 +15,7 @@ spec:
         app: {{ include "db.name" . }}
     spec:
       containers:
-        - name: {{ .db.Name }}
+        - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
