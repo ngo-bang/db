@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: ngocongbang/db
+  repository: ngocongbang/database
   pullPolicy: IfNotPresent
   tag: ""
 
