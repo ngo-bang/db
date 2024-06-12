@@ -10,4 +10,4 @@ spec:
       targetPort: {{ .Values.service.port }}
       nodePort: {{ .Values.service.nodePort }}
   selector:
-    pp: {{ include "db.name" . }}
+    app: {{ include "db.name" . }}
