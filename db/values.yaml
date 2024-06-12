@@ -9,5 +9,5 @@ service:
   port: 27017
   targetPort: 27017
   type: NodePort
-  nodePort: 27017
+  nodePort: 30010
 
