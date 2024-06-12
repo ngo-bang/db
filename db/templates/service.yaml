@@ -7,3 +7,5 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       targetPort: {{ .Values.service.port }}
+  selector:
+    pp: {{ include "db.name" . }}
