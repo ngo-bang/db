@@ -8,5 +8,6 @@ image:
 service:
   port: 27017
   targetPort: 27017
-  type: ClusterIP
+  type: NodePort
+  nodePort: 27017
 
