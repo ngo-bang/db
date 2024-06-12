@@ -9,12 +9,4 @@ service:
   port: 27017
   targetPort: 27017
   type: ClusterIP
-  
-persistence:
-  enabled: true
-  accessModes:
-    - ReadWriteOne
-  size: 4Gi
-  storageClass: ""
-  path: "/data"
-  classname: "manual"
+
